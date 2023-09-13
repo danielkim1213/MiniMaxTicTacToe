@@ -46,6 +46,7 @@ public class MainPage extends javax.swing.JFrame {
         lblStatus = new javax.swing.JLabel();
         lblBestMove = new javax.swing.JLabel();
         lblCounter = new javax.swing.JLabel();
+        btnRestart = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(313, 382));
@@ -123,6 +124,14 @@ public class MainPage extends javax.swing.JFrame {
 
         lblCounter.setText("jLabel1");
         getContentPane().add(lblCounter, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
+
+        btnRestart.setText("restart");
+        btnRestart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRestartActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnRestart, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -208,6 +217,27 @@ public class MainPage extends javax.swing.JFrame {
             changeTurn();
         }
     }//GEN-LAST:event_btnTile9ActionPerformed
+
+    private void btnRestartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestartActionPerformed
+        btnTile1.setText("");
+        btnTile2.setText("");
+        btnTile3.setText("");
+        btnTile4.setText("");
+        btnTile5.setText("");
+        btnTile6.setText("");
+        btnTile7.setText("");
+        btnTile8.setText("");
+        btnTile9.setText("");
+        for(int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                tile[i][j] = "";
+            }
+        }
+        turn = "O";
+        lblCounter.setText("");
+    }//GEN-LAST:event_btnRestartActionPerformed
         
     /**
      * @param args the command line arguments
@@ -382,6 +412,7 @@ public class MainPage extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnRestart;
     private javax.swing.JButton btnTile1;
     private javax.swing.JButton btnTile2;
     private javax.swing.JButton btnTile3;
