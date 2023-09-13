@@ -122,7 +122,7 @@ public class MainPage extends javax.swing.JFrame {
         lblBestMove.setText("Best Move: ");
         getContentPane().add(lblBestMove, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, -1));
 
-        lblCounter.setText("jLabel1");
+        lblCounter.setText("0,0");
         getContentPane().add(lblCounter, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, -1, -1));
 
         btnRestart.setText("restart");
@@ -237,6 +237,16 @@ public class MainPage extends javax.swing.JFrame {
         }
         turn = "O";
         lblCounter.setText("");
+        btnTile1.setEnabled(true);
+        btnTile2.setEnabled(true);
+        btnTile3.setEnabled(true);
+        btnTile4.setEnabled(true);
+        btnTile5.setEnabled(true);
+        btnTile6.setEnabled(true);
+        btnTile7.setEnabled(true);
+        btnTile8.setEnabled(true);
+        btnTile9.setEnabled(true);
+        lblBestMove.setText("Best Move: ");
     }//GEN-LAST:event_btnRestartActionPerformed
         
     /**
@@ -280,6 +290,15 @@ public class MainPage extends javax.swing.JFrame {
         if(winner != "?")
         {
             lblStatus.setText(winner);
+            btnTile1.setEnabled(false);
+            btnTile2.setEnabled(false);
+            btnTile3.setEnabled(false);
+            btnTile4.setEnabled(false);
+            btnTile5.setEnabled(false);
+            btnTile6.setEnabled(false);
+            btnTile7.setEnabled(false);
+            btnTile8.setEnabled(false);
+            btnTile9.setEnabled(false);
         }
         if (turn == "O")
         {
